@@ -1,6 +1,7 @@
 package demo;
 
 import java.io.FileOutputStream;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 向文件中写入一个字节
@@ -8,7 +9,8 @@ import java.io.FileOutputStream;
 public class HelloWorld {
     public static void main(String[] args) throws Exception {
         FileOutputStream fos = new FileOutputStream("fos.dat");
-        fos.write(1);
+        String line = "犬は机の上にいます";
+        fos.write(line.getBytes(StandardCharsets.UTF_8));
         System.out.println("写出完毕");
         fos.close();
     }
