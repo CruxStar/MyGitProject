@@ -13,6 +13,8 @@ public class HelloWorld {
         fos.write(line.getBytes(StandardCharsets.UTF_8));
         line = "分支上写入的内容";
         fos.write(line.getBytes(StandardCharsets.UTF_8));
+        line = "分支再次添加写入操作";
+        fos.write(line.getBytes(StandardCharsets.UTF_8));
         System.out.println("写出完毕");
         fos.close();
     }
